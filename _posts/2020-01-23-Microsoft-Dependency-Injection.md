@@ -2,6 +2,7 @@
 layout: post
 title: Is .NET Core Built-in container enough for your DI?
 ---
+### Is .NET Core Built-in container enough for your DI?
 One of the first choices you have to make when starting a .NET core project is whether to use the built-in DI container from Microsoft, or to use third-party DI containers for injecting and resolving dependencies in your project.
 One of the advantage that the built-in Microsoft dependency injection will gives you, is that the .NET core framework libraries themselves register their dependencies using it. Actually the goal of the built-in container is to provide DI for the framework itself and to keep it simple as possible to integrate other third-party DI containers with it. For small projects o projects that doesn't have much depended services to run, the built-in DI will do the work just fine, but if you need more advanced, convention based registration and injections, then you will need to look for third-party containers like [AutoFac](https://autofac.readthedocs.io/en/latest/integration/aspnetcore.html) or [Unity](https://www.nuget.org/packages/Unity.Microsoft.DependencyInjection).
 
